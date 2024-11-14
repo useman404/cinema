@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Film</title>
+    <link rel="stylesheet" href="prj.css">
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🎥 Cinéma Zakaria, Rabya et Yassir</h1>
+    </div>
+</header>
+
+<section id="film-details" class="container">
+    <h2 id="film-title">Titre du Film</h2>
+    <img id="film-image" src="" alt="Image du Film">
+    <p id="film-description">Description détaillée du film...</p>
+
+    <h3>Personnages principaux</h3>
+    <ul id="characters-list">
+        <!-- Liste des personnages -->
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 Cinéma Zakaria, Rabya et Yassir. Tous droits réservés.</p>
+</footer>
+
+<script>
+    // Fonction pour récupérer les paramètres de l'URL
+    function getFilmId() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('film');
+    }
+
+    // Fonction pour afficher les détails du film en fonction de l'ID
+    function loadFilmDetails() {
+        const filmId = getFilmId();
+        let title = '';
+        let description = '';
+        let imageUrl = '';
+        let characters = [];
+
+        // Données fictives pour les films (cela peut être remplacé par des données dynamiques)
+        if (filmId == '1') {
+            title = 'Film 1';
+            description = 'Description détaillée du Film 1.';
+            imageUrl = 'https://via.placeholder.com/200x300';
+            characters = ['Personnage 1', 'Personnage 2', 'Personnage 3'];
+        } else if (filmId == '2') {
+            title = 'Film 2';
+            description = 'Description détaillée du Film 2.';
+            imageUrl = 'https://via.placeholder.com/200x300';
+            characters = ['Personnage 1', 'Personnage 2', 'Personnage 3'];
+        } else if (filmId == '3') {
+            title = 'Film 3';
+            description = 'Description détaillée du Film 3.';
+            imageUrl = 'https://via.placeholder.com/200x300';
+            characters = ['Personnage 1', 'Personnage 2', 'Personnage 3'];
+        }
+
+        // Mise à jour du contenu de la page
+        document.getElementById('film-title').innerText = title;
+        document.getElementById('film-image').src = imageUrl;
+        document.getElementById('film-description').innerText = description;
+
+        // Afficher les personnages
+        const charactersList = document.getElementById('characters-list');
+        charactersList.innerHTML = ''; // Réinitialiser la liste
+        characters.forEach(function(character) {
+            const li = document.createElement('li');
+            li.textContent = character;
+            charactersList.appendChild(li);
+        });
+    }
+
+    // Charger les détails du film au chargement de la page
+    window.onload = loadFilmDetails;
+</script>
+
+</body>
+</html>

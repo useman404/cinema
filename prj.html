@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinéma Zakaria, Rabya et Yassir</title>
+    <link rel="stylesheet" href="prj.css">
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🎥 Cinéma OUARZAZATE</h1>
+        <p>Découvrez les meilleurs films dans un cadre exceptionnel !</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#films">Films</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button id="loginBtn">Connexion</button>
+            <button id="signupBtn">Inscription</button>
+        </div>
+    </div>
+</nav>
+
+<section id="films" class="container">
+    <h2>Films à l'affiche</h2>
+    <div class="films-list">
+        <div class="film">
+            <a href="page1.html?film=1">
+                <img src="https://via.placeholder.com/200x300" alt="Film 1">
+                <h3>Film 1</h3>
+            </a>
+            <p>Résumé du film 1...</p>
+        </div>
+        <div class="film">
+            <a href="page1.html?film=2">
+                <img src="https://via.placeholder.com/200x300" alt="Film 2">
+                <h3>Film 2</h3>
+            </a>
+            <p>Résumé du film 2...</p>
+        </div>
+        <div class="film">
+            <a href="page1.html?film=3">
+                <img src="https://via.placeholder.com/200x300" alt="Film 3">
+                <h3>Film 3</h3>
+            </a>
+            <p>Résumé du film 3...</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="about" class="container">
+    <h2>À propos</h2>
+    <p>Cinéma OUARZAZATE est un lieu unique pour vivre une expérience cinématographique mémorable. Situé au cœur de la ville, nous proposons une sélection diversifiée de films, des avant-premières aux classiques intemporels.</p>
+</section>
+
+<section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>📍 Adresse : Avenue des Cinéastes, OUARZAZATE</p>
+    <p>📞 Téléphone : +212 5 24 00 00 00</p>
+    <p>📧 Email : contact@cinemazry.com</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Cinéma OUARZAZATE By : Zakaria, Rabya et Yassir. Tous droits réservés.</p>
+</footer>
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal('loginModal')">&times;</button>
+        <h2>Connexion</h2>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Mot de passe">
+        <button onclick="handleLogin()">Se connecter</button>
+    </div>
+</div>
+
+<!-- Modal Sign Up -->
+<div class="modal" id="signupModal">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal('signupModal')">&times;</button>
+        <h2>Inscription</h2>
+        <input type="text" id="signupName" placeholder="Nom complet">
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupPassword" placeholder="Mot de passe">
+        <button onclick="handleSignup()">S'inscrire</button>
+    </div>
+</div>
+<script src="prj.js"></script>
+</body>
+</html>
